@@ -216,7 +216,9 @@ for epoch in range(1, NUM_EPOCHS+1):
             # print("epoch: "+str(epoch) + "   loss: "+str(loss.data[0]))
             print("epoch: "+str(epoch) + "   loss: "+str(loss.data.item()))
             if global_step % 25 == 0:
-                loss_v = loss.data[0]
+                # Commented out by Justin
+                # loss_v = loss.data[0]
+                loss_v = loss.data.item()
                 print("Loss:", loss_v)
             else:
                 loss_v = 0
